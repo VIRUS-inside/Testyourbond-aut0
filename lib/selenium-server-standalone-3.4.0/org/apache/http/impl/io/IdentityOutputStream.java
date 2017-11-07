@@ -1,0 +1,101 @@
+package org.apache.http.impl.io;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import org.apache.http.io.SessionOutputBuffer;
+import org.apache.http.util.Args;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class IdentityOutputStream
+  extends OutputStream
+{
+  private final SessionOutputBuffer out;
+  private boolean closed = false;
+  
+  public IdentityOutputStream(SessionOutputBuffer out)
+  {
+    this.out = ((SessionOutputBuffer)Args.notNull(out, "Session output buffer"));
+  }
+  
+
+
+
+
+  public void close()
+    throws IOException
+  {
+    if (!closed) {
+      closed = true;
+      out.flush();
+    }
+  }
+  
+  public void flush() throws IOException
+  {
+    out.flush();
+  }
+  
+  public void write(byte[] b, int off, int len) throws IOException
+  {
+    if (closed) {
+      throw new IOException("Attempted write to closed stream.");
+    }
+    out.write(b, off, len);
+  }
+  
+  public void write(byte[] b) throws IOException
+  {
+    write(b, 0, b.length);
+  }
+  
+  public void write(int b) throws IOException
+  {
+    if (closed) {
+      throw new IOException("Attempted write to closed stream.");
+    }
+    out.write(b);
+  }
+}

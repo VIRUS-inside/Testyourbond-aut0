@@ -1,0 +1,67 @@
+package org.apache.http.conn.params;
+
+import java.net.InetAddress;
+import org.apache.http.HttpHost;
+import org.apache.http.conn.routing.HttpRoute;
+import org.apache.http.params.HttpAbstractParamBean;
+import org.apache.http.params.HttpParams;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@Deprecated
+public class ConnRouteParamBean
+  extends HttpAbstractParamBean
+{
+  public ConnRouteParamBean(HttpParams params)
+  {
+    super(params);
+  }
+  
+  public void setDefaultProxy(HttpHost defaultProxy)
+  {
+    params.setParameter("http.route.default-proxy", defaultProxy);
+  }
+  
+  public void setLocalAddress(InetAddress address)
+  {
+    params.setParameter("http.route.local-address", address);
+  }
+  
+  public void setForcedRoute(HttpRoute route)
+  {
+    params.setParameter("http.route.forced-route", route);
+  }
+}

@@ -1,0 +1,29 @@
+package com.sun.jna;
+
+
+
+
+
+public class FunctionResultContext
+  extends FromNativeContext
+{
+  private Function function;
+  
+
+
+  private Object[] args;
+  
+
+
+
+  FunctionResultContext(Class resultClass, Function function, Object[] args)
+  {
+    super(resultClass);
+    this.function = function;
+    this.args = args;
+  }
+  
+  public Function getFunction() { return function; }
+  
+  public Object[] getArguments() { return args; }
+}

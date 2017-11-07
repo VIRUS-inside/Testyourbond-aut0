@@ -1,0 +1,183 @@
+package org.openqa.selenium.support;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public enum Colors
+{
+  TRANSPARENT(new Color(0, 0, 0, 0.0D)), 
+  ALICEBLUE(new Color(240, 248, 255, 1.0D)), 
+  ANTIQUEWHITE(new Color(250, 235, 215, 1.0D)), 
+  AQUA(new Color(0, 255, 255, 1.0D)), 
+  AQUAMARINE(new Color(127, 255, 212, 1.0D)), 
+  AZURE(new Color(240, 255, 255, 1.0D)), 
+  BEIGE(new Color(245, 245, 220, 1.0D)), 
+  BISQUE(new Color(255, 228, 196, 1.0D)), 
+  BLACK(new Color(0, 0, 0, 1.0D)), 
+  BLANCHEDALMOND(new Color(255, 235, 205, 1.0D)), 
+  BLUE(new Color(0, 0, 255, 1.0D)), 
+  BLUEVIOLET(new Color(138, 43, 226, 1.0D)), 
+  BROWN(new Color(165, 42, 42, 1.0D)), 
+  BURLYWOOD(new Color(222, 184, 135, 1.0D)), 
+  CADETBLUE(new Color(95, 158, 160, 1.0D)), 
+  CHARTREUSE(new Color(127, 255, 0, 1.0D)), 
+  CHOCOLATE(new Color(210, 105, 30, 1.0D)), 
+  CORAL(new Color(255, 127, 80, 1.0D)), 
+  CORNFLOWERBLUE(new Color(100, 149, 237, 1.0D)), 
+  CORNSILK(new Color(255, 248, 220, 1.0D)), 
+  CRIMSON(new Color(220, 20, 60, 1.0D)), 
+  CYAN(new Color(0, 255, 255, 1.0D)), 
+  DARKBLUE(new Color(0, 0, 139, 1.0D)), 
+  DARKCYAN(new Color(0, 139, 139, 1.0D)), 
+  DARKGOLDENROD(new Color(184, 134, 11, 1.0D)), 
+  DARKGRAY(new Color(169, 169, 169, 1.0D)), 
+  DARKGREEN(new Color(0, 100, 0, 1.0D)), 
+  DARKGREY(new Color(169, 169, 169, 1.0D)), 
+  DARKKHAKI(new Color(189, 183, 107, 1.0D)), 
+  DARKMAGENTA(new Color(139, 0, 139, 1.0D)), 
+  DARKOLIVEGREEN(new Color(85, 107, 47, 1.0D)), 
+  DARKORANGE(new Color(255, 140, 0, 1.0D)), 
+  DARKORCHID(new Color(153, 50, 204, 1.0D)), 
+  DARKRED(new Color(139, 0, 0, 1.0D)), 
+  DARKSALMON(new Color(233, 150, 122, 1.0D)), 
+  DARKSEAGREEN(new Color(143, 188, 143, 1.0D)), 
+  DARKSLATEBLUE(new Color(72, 61, 139, 1.0D)), 
+  DARKSLATEGRAY(new Color(47, 79, 79, 1.0D)), 
+  DARKSLATEGREY(new Color(47, 79, 79, 1.0D)), 
+  DARKTURQUOISE(new Color(0, 206, 209, 1.0D)), 
+  DARKVIOLET(new Color(148, 0, 211, 1.0D)), 
+  DEEPPINK(new Color(255, 20, 147, 1.0D)), 
+  DEEPSKYBLUE(new Color(0, 191, 255, 1.0D)), 
+  DIMGRAY(new Color(105, 105, 105, 1.0D)), 
+  DIMGREY(new Color(105, 105, 105, 1.0D)), 
+  DODGERBLUE(new Color(30, 144, 255, 1.0D)), 
+  FIREBRICK(new Color(178, 34, 34, 1.0D)), 
+  FLORALWHITE(new Color(255, 250, 240, 1.0D)), 
+  FORESTGREEN(new Color(34, 139, 34, 1.0D)), 
+  FUCHSIA(new Color(255, 0, 255, 1.0D)), 
+  GAINSBORO(new Color(220, 220, 220, 1.0D)), 
+  GHOSTWHITE(new Color(248, 248, 255, 1.0D)), 
+  GOLD(new Color(255, 215, 0, 1.0D)), 
+  GOLDENROD(new Color(218, 165, 32, 1.0D)), 
+  GRAY(new Color(128, 128, 128, 1.0D)), 
+  GREY(new Color(128, 128, 128, 1.0D)), 
+  GREEN(new Color(0, 128, 0, 1.0D)), 
+  GREENYELLOW(new Color(173, 255, 47, 1.0D)), 
+  HONEYDEW(new Color(240, 255, 240, 1.0D)), 
+  HOTPINK(new Color(255, 105, 180, 1.0D)), 
+  INDIANRED(new Color(205, 92, 92, 1.0D)), 
+  INDIGO(new Color(75, 0, 130, 1.0D)), 
+  IVORY(new Color(255, 255, 240, 1.0D)), 
+  KHAKI(new Color(240, 230, 140, 1.0D)), 
+  LAVENDER(new Color(230, 230, 250, 1.0D)), 
+  LAVENDERBLUSH(new Color(255, 240, 245, 1.0D)), 
+  LAWNGREEN(new Color(124, 252, 0, 1.0D)), 
+  LEMONCHIFFON(new Color(255, 250, 205, 1.0D)), 
+  LIGHTBLUE(new Color(173, 216, 230, 1.0D)), 
+  LIGHTCORAL(new Color(240, 128, 128, 1.0D)), 
+  LIGHTCYAN(new Color(224, 255, 255, 1.0D)), 
+  LIGHTGOLDENRODYELLOW(new Color(250, 250, 210, 1.0D)), 
+  LIGHTGRAY(new Color(211, 211, 211, 1.0D)), 
+  LIGHTGREEN(new Color(144, 238, 144, 1.0D)), 
+  LIGHTGREY(new Color(211, 211, 211, 1.0D)), 
+  LIGHTPINK(new Color(255, 182, 193, 1.0D)), 
+  LIGHTSALMON(new Color(255, 160, 122, 1.0D)), 
+  LIGHTSEAGREEN(new Color(32, 178, 170, 1.0D)), 
+  LIGHTSKYBLUE(new Color(135, 206, 250, 1.0D)), 
+  LIGHTSLATEGRAY(new Color(119, 136, 153, 1.0D)), 
+  LIGHTSLATEGREY(new Color(119, 136, 153, 1.0D)), 
+  LIGHTSTEELBLUE(new Color(176, 196, 222, 1.0D)), 
+  LIGHTYELLOW(new Color(255, 255, 224, 1.0D)), 
+  LIME(new Color(0, 255, 0, 1.0D)), 
+  LIMEGREEN(new Color(50, 205, 50, 1.0D)), 
+  LINEN(new Color(250, 240, 230, 1.0D)), 
+  MAGENTA(new Color(255, 0, 255, 1.0D)), 
+  MAROON(new Color(128, 0, 0, 1.0D)), 
+  MEDIUMAQUAMARINE(new Color(102, 205, 170, 1.0D)), 
+  MEDIUMBLUE(new Color(0, 0, 205, 1.0D)), 
+  MEDIUMORCHID(new Color(186, 85, 211, 1.0D)), 
+  MEDIUMPURPLE(new Color(147, 112, 219, 1.0D)), 
+  MEDIUMSEAGREEN(new Color(60, 179, 113, 1.0D)), 
+  MEDIUMSLATEBLUE(new Color(123, 104, 238, 1.0D)), 
+  MEDIUMSPRINGGREEN(new Color(0, 250, 154, 1.0D)), 
+  MEDIUMTURQUOISE(new Color(72, 209, 204, 1.0D)), 
+  MEDIUMVIOLETRED(new Color(199, 21, 133, 1.0D)), 
+  MIDNIGHTBLUE(new Color(25, 25, 112, 1.0D)), 
+  MINTCREAM(new Color(245, 255, 250, 1.0D)), 
+  MISTYROSE(new Color(255, 228, 225, 1.0D)), 
+  MOCCASIN(new Color(255, 228, 181, 1.0D)), 
+  NAVAJOWHITE(new Color(255, 222, 173, 1.0D)), 
+  NAVY(new Color(0, 0, 128, 1.0D)), 
+  OLDLACE(new Color(253, 245, 230, 1.0D)), 
+  OLIVE(new Color(128, 128, 0, 1.0D)), 
+  OLIVEDRAB(new Color(107, 142, 35, 1.0D)), 
+  ORANGE(new Color(255, 165, 0, 1.0D)), 
+  ORANGERED(new Color(255, 69, 0, 1.0D)), 
+  ORCHID(new Color(218, 112, 214, 1.0D)), 
+  PALEGOLDENROD(new Color(238, 232, 170, 1.0D)), 
+  PALEGREEN(new Color(152, 251, 152, 1.0D)), 
+  PALETURQUOISE(new Color(175, 238, 238, 1.0D)), 
+  PALEVIOLETRED(new Color(219, 112, 147, 1.0D)), 
+  PAPAYAWHIP(new Color(255, 239, 213, 1.0D)), 
+  PEACHPUFF(new Color(255, 218, 185, 1.0D)), 
+  PERU(new Color(205, 133, 63, 1.0D)), 
+  PINK(new Color(255, 192, 203, 1.0D)), 
+  PLUM(new Color(221, 160, 221, 1.0D)), 
+  POWDERBLUE(new Color(176, 224, 230, 1.0D)), 
+  PURPLE(new Color(128, 0, 128, 1.0D)), 
+  REBECCAPURPLE(new Color(102, 51, 153, 1.0D)), 
+  RED(new Color(255, 0, 0, 1.0D)), 
+  ROSYBROWN(new Color(188, 143, 143, 1.0D)), 
+  ROYALBLUE(new Color(65, 105, 225, 1.0D)), 
+  SADDLEBROWN(new Color(139, 69, 19, 1.0D)), 
+  SALMON(new Color(250, 128, 114, 1.0D)), 
+  SANDYBROWN(new Color(244, 164, 96, 1.0D)), 
+  SEAGREEN(new Color(46, 139, 87, 1.0D)), 
+  SEASHELL(new Color(255, 245, 238, 1.0D)), 
+  SIENNA(new Color(160, 82, 45, 1.0D)), 
+  SILVER(new Color(192, 192, 192, 1.0D)), 
+  SKYBLUE(new Color(135, 206, 235, 1.0D)), 
+  SLATEBLUE(new Color(106, 90, 205, 1.0D)), 
+  SLATEGRAY(new Color(112, 128, 144, 1.0D)), 
+  SLATEGREY(new Color(112, 128, 144, 1.0D)), 
+  SNOW(new Color(255, 250, 250, 1.0D)), 
+  SPRINGGREEN(new Color(0, 255, 127, 1.0D)), 
+  STEELBLUE(new Color(70, 130, 180, 1.0D)), 
+  TAN(new Color(210, 180, 140, 1.0D)), 
+  TEAL(new Color(0, 128, 128, 1.0D)), 
+  THISTLE(new Color(216, 191, 216, 1.0D)), 
+  TOMATO(new Color(255, 99, 71, 1.0D)), 
+  TURQUOISE(new Color(64, 224, 208, 1.0D)), 
+  VIOLET(new Color(238, 130, 238, 1.0D)), 
+  WHEAT(new Color(245, 222, 179, 1.0D)), 
+  WHITE(new Color(255, 255, 255, 1.0D)), 
+  WHITESMOKE(new Color(245, 245, 245, 1.0D)), 
+  YELLOW(new Color(255, 255, 0, 1.0D)), 
+  YELLOWGREEN(new Color(154, 205, 50, 1.0D));
+  
+  private final Color colorValue;
+  
+  private Colors(Color colorValue) {
+    this.colorValue = colorValue;
+  }
+  
+  public Color getColorValue() {
+    return colorValue;
+  }
+}

@@ -1,0 +1,125 @@
+package org.yaml.snakeyaml.reader;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PushbackInputStream;
+import java.io.Reader;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.CodingErrorAction;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class UnicodeReader
+  extends Reader
+{
+  private static final Charset UTF8 = Charset.forName("UTF-8");
+  private static final Charset UTF16BE = Charset.forName("UTF-16BE");
+  private static final Charset UTF16LE = Charset.forName("UTF-16LE");
+  
+  PushbackInputStream internalIn;
+  InputStreamReader internalIn2 = null;
+  
+
+  private static final int BOM_SIZE = 3;
+  
+
+
+  public UnicodeReader(InputStream in)
+  {
+    internalIn = new PushbackInputStream(in, 3);
+  }
+  
+
+
+
+  public String getEncoding()
+  {
+    return internalIn2.getEncoding();
+  }
+  
+
+
+  protected void init()
+    throws IOException
+  {
+    if (internalIn2 != null) {
+      return;
+    }
+    
+    byte[] bom = new byte[3];
+    
+    int n = internalIn.read(bom, 0, bom.length);
+    int unread;
+    Charset encoding; int unread; if ((bom[0] == -17) && (bom[1] == -69) && (bom[2] == -65)) {
+      Charset encoding = UTF8;
+      unread = n - 3; } else { int unread;
+      if ((bom[0] == -2) && (bom[1] == -1)) {
+        Charset encoding = UTF16BE;
+        unread = n - 2; } else { int unread;
+        if ((bom[0] == -1) && (bom[1] == -2)) {
+          Charset encoding = UTF16LE;
+          unread = n - 2;
+        }
+        else {
+          encoding = UTF8;
+          unread = n;
+        }
+      } }
+    if (unread > 0) {
+      internalIn.unread(bom, n - unread, unread);
+    }
+    
+    CharsetDecoder decoder = encoding.newDecoder().onUnmappableCharacter(CodingErrorAction.REPORT);
+    
+    internalIn2 = new InputStreamReader(internalIn, decoder);
+  }
+  
+  public void close() throws IOException {
+    init();
+    internalIn2.close();
+  }
+  
+  public int read(char[] cbuf, int off, int len) throws IOException {
+    init();
+    return internalIn2.read(cbuf, off, len);
+  }
+}
